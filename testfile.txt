@@ -1,7 +1,7 @@
 Dit is een testfile.
-Regel1;
-Regel2;
-Regel3;
+Regel1
+Regel2
+Regel3
 Regel4;
 Regel5;
 Regel6;
