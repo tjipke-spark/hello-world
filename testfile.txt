@@ -2,10 +2,10 @@ Dit is een testfile.
 Regel1;
 Regel2;
 Regel3;
-Regel4;
-Regel5;
-Regel6;
-Regel7;
+Regel4
+Regel5
+Regel6
+Regel7
 Regel8
 Regel9
 RegelA
