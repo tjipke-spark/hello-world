@@ -7,8 +7,8 @@ Regel6
 Regel7
 Regel8
 Regel9
-Regel10
-Regel11
-Regel12
+RegelA
+RegelB
+RegelC
 Regel13
 Regel14
