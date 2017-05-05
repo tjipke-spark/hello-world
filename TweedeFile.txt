@@ -1,5 +1,4 @@
 Line A1
-Ook in takje A
 De 3e
 Line B
 Line C1
