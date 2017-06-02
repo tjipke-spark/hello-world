@@ -1,8 +1,8 @@
 Dit is een testfile.
-Regel1
-Regel2
-Regel3
-Regel4
+Regel1a
+Regel2a
+Regel3a
+Regel4a
 Regel5
 Regel6
 Regel7
