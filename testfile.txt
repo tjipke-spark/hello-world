@@ -11,5 +11,5 @@ Regel9
 RegelAa
 RegelBa
 RegelC
-Regel13
-Regel14
+Regel13a
+Regel14a
