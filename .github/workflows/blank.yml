@@ -43,6 +43,20 @@ jobs:
               Write-Host "::error::Low disk space: $freeGB GB free"
               exit 1
           }
+
+          $driveLetter = (Get-Location).Path.Substring(0,1)
+          $drive = Get-PSDrive -Name $driveLetter
+          $freeGB = [math]::Round($drive.Free / 1GB, 2)
+          $totalGB = [math]::Round(($drive.Used + $drive.Free) / 1GB, 2)
+
+          $summary = @"
+          ### 💾 Disk Usage
+          - Drive: $driveLetter
+          - Free: **$freeGB GB**
+          - Total: $totalGB GB
+          "@
+
+          $summary | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
           
       # Runs a single command using the runners shell
       - name: Run a one-line script
