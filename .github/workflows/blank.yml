@@ -36,7 +36,6 @@ jobs:
           }
 
           $freeGB = [math]::Round($drive.Free / 1GB, 2)
-          Write-Host "::notice::To be or not to be"
           Write-Host "Disk check: $freeGB GB free"
 
           if ($freeGB -lt $thresholdGB) {
