@@ -37,6 +37,7 @@ jobs:
 
           $freeGB = [math]::Round($drive.Free / 1GB, 2)
           Write-Host "Disk check: $freeGB GB free"
+          Write-Output "::notice::To be or not to be"
 
           if ($freeGB -lt $thresholdGB) {
               Write-Host "::error::Low disk space: $freeGB GB free"
