@@ -25,6 +25,25 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
+      - name: Check disk space
+        shell: pwsh
+        run: |
+          $thresholdGB = 5
+          $drive = Get-PSDrive -PSProvider FileSystem | Where-Object { $_.Name -eq "/" -or $_.Root -eq "/" }
+
+          if (-not $drive) {
+              $drive = Get-PSDrive -PSProvider FileSystem | Select-Object -First 1
+          }
+
+          $freeGB = [math]::Round($drive.Free / 1GB, 2)
+
+          Write-Host "Disk check: $freeGB GB free"
+
+          if ($freeGB -lt $thresholdGB) {
+              Write-Host "::error::Low disk space: $freeGB GB free"
+              exit 1
+          }
+          
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
