@@ -57,6 +57,8 @@ jobs:
           "@
 
           $summary | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+
+          Write-Host "::notice::To be or not to be"
           
       # Runs a single command using the runners shell
       - name: Run a one-line script
